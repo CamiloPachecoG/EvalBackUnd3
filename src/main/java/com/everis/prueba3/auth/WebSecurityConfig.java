@@ -1,5 +1,5 @@
-/*package auth;
-
+package com.everis.prueba3.auth;
+/*
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -12,11 +12,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.
             authorizeRequests()
-                .antMatchers("/static/**", "/index/**", "/usuario/**").permitAll()
+                .antMatchers("/static/**", "/login/**", "/producto/**" ,"/categoria/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
-                .loginPage("/index")
+                .loginPage("/login")
                 .permitAll()
                 .and()
             .logout()
